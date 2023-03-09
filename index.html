@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Black Jack</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap" rel="stylesheet">
+
+<body>
+    
+  <h2 id="welcome">Mr. Albinson's Kid's Casino!</h2>
+  <p id="warning">**Please only gamble if you are over the age of 21, or have the permission of the esteemed Mr. Albinson.
+  The rules are simple: Don't go over 21, but get as close as you can.
+  If you win, you double your bet in Albinbucks  :D.
+  If you lose, you lose your whole bet of valuable Albinbucks :(.
+  </p>
+
+  <div id="flex">
+  <h3 id="current_bet"></h3>
+
+  <div id="sub_flex">
+  <div id="dealer_hand"></div>
+  <div id="hand"></div>
+
+  <div id="button_menu">
+  <button id ="play"> Deal </button>
+  <button id ="hit" class="hidden"> Hit </button>
+  <button id ="stay" class="hidden"> Stay </button>
+  <button id ="doubleDown" class="hidden"> Double Down </button>
+  </div>
+
+  <div id="bet_box">
+  <div id="bet_menu">
+    
+  <button id="5" class="chip"> 5 </button>
+  <button id="10" class="chip"> 10 </button>
+  <button id="25" class="chip"> 25 </button> 
+  <button id="50" class="chip"> 50 </button>
+  <button id="100" class="chip"> 100 </button>
+  <button id="250" class="chip"> 250 </button>
+    
+  </div>
+    <h3 id="money_count"></h3> 
+  </div>
+    
+</div>
+
+<div id="resultPopUp" class="hidden">
+  <h2 id="result"> </h2>
+  <h2 id="yourTotal"> </h2>
+  <h2 id="dealerTotal"> </h2>
+</div>
+</div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

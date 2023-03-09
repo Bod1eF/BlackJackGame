@@ -1,0 +1,179 @@
+@font-face {
+  font-family: 'castile';
+  src: url(castile.otf);
+}
+
+@font-face {
+  font-family: 'forty';
+  src: url(forty.TTF);
+  font-weight:normal;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background:#E8DDB5;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  padding:0;
+  margin:0;
+}
+
+h2 {
+  font-size:48px;
+  color:#13262F;
+  text-align:center;
+  font-family:'forty';
+  font-weight:normal;
+  margin:0;
+  margin-top:-1.5%;
+}
+
+.stay{
+  background:black;
+  border:white;
+}
+.hit {
+  background:white;
+  border:black;
+}
+
+p {
+  font-size:14px;
+  color:#13262F;
+  text-align:center;
+  max-width:80%;
+  margin-top:0%;
+  font-family:'Rowdies';
+  font-weight:300;
+}
+
+
+#flex {
+  color:#9BA7C0;;
+  width:84%;
+  height:70%;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  flex-direction:column;
+  background-color:#13262F;
+  padding:2%;
+}
+
+#dealer_hand, #hand {
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   font-weight:400;
+   font-family:'Rowdies';
+   font-size:42px;
+   margin:0;
+}
+
+#dealer_hand img, #hand img {
+  width:6vmax;
+  margin:1vmax;
+}
+
+
+#current_bet {
+   font-weight:400;
+   font-family:'Rowdies';
+   font-size:40px;
+   margin-bottom:3%;
+   margin-top:0;
+}
+
+div#sub_flex {
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  flex-direction:column;
+  height:80%;
+  width:100%;
+  padding:0;
+  margin:0;
+}
+
+#button_menu button {
+  padding:10px;
+  font-size:36px;
+  margin:10px;
+  color:#13262F;
+  width:10vmax;
+  background-color:#9BA7C0;
+  border:none;
+  font-family: 'Rowdies';
+}
+
+#resultPopUp.hidden {
+  display:none;
+  width:0;
+  height:0;
+}
+
+.hidden {
+  display:none;
+  width:0;
+  height:0;
+}
+
+#button_menu, #bet_menu {
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  width:80%;
+}
+
+#bet_box {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  width:80%;
+}
+
+#money_count {
+  font-size:40px;
+  margin:0;
+  font-weight:400;
+  font-family:"Rowdies"
+}
+
+.chip {
+  font-size:36px;
+  margin:1%;
+  font-weight:400;
+  font-family:"Rowdies";
+  border-radius:100%;
+  background-color:#9BA7C0;
+  color:#13262F;
+  border:none;
+  width:6vmax;
+  height:6vmax;
+}
+
+#resultPopUp {
+  position:absolute;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  padding:3%;
+  width:50%;
+  height:55%;
+  background-color:#9BA7C0;
+}
+
+#resultPopUp h2 {
+  font-size:3vmax;
+  color:#13262F;
+  text-align:center;
+  font-family:'Rowdies';
+  font-weight:normal;
+  margin:2%;
+}

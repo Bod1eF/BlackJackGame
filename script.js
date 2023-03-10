@@ -46,10 +46,16 @@ $("#current_bet").html("Current Bet: " + currentBet + " Albinbucks");
 
 $(".chip").click((event) => {
   
-  chipValue =  parseInt($(event.target).attr('id'));
-  if ((money - chipValue) >= 0) {
-   currentBet += chipValue;
-   money -= chipValue;
+  chipValue = $(event.target).attr('id');
+  if(chipValue == "allIn") {
+    currentBet += money;
+    money = 0;
+    $("#money_count").html("Balance: " + money + " Albinbucks");
+    $("#current_bet").html("Current Bet: " + currentBet + " Albinbucks");
+  }
+  else if ((money - chipValue) >= 0) {
+   currentBet += parseInt(chipValue);
+   money -= parseInt(chipValue);
    $("#money_count").html("Balance: " + money + " Albinbucks");
    $("#current_bet").html("Current Bet: " + currentBet + " Albinbucks");
   }
@@ -169,7 +175,7 @@ function stay() {
 function dealerHit() {
   
   if (dealerSum >= 17) {
-      setTimeout(resultCheck, 800);
+      setTimeout(resultCheck, 700);
   }
     
   else {
@@ -185,11 +191,11 @@ function dealerHit() {
   if (dealerSum > 21) { 
     setTimeout(dealerBust, 800);
   }
-    
+  else {
   setTimeout(dealerHit, 800); 
   }
   }
-
+}
 $("#stay").click(() => {
   stay();
    });

@@ -1,179 +1,66 @@
-@font-face {
-  font-family: 'castile';
-  src: url(castile.otf);
-}
+<!DOCTYPE html>
+<html>
 
-@font-face {
-  font-family: 'forty';
-  src: url(forty.TTF);
-  font-weight:normal;
-}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Black Jack</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
 
-html, body {
-  height: 100%;
-  width: 100%;
-  background:#E8DDB5;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-  padding:0;
-  margin:0;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap" rel="stylesheet">
 
-h2 {
-  font-size:48px;
-  color:#13262F;
-  text-align:center;
-  font-family:'forty';
-  font-weight:normal;
-  margin:0;
-  margin-top:-1.5%;
-}
+<body>
+    
+  <h2 id="welcome">Mr. Albinson's Kid's Casino!</h2>
+  <p id="warning">**Please only gamble if you are over the age of 21, or have the permission of the esteemed Mr. Albinson.
+  The rules are simple: Don't go over 21, but get as close as you can.
+  If you win, you double your bet in Albinbucks  :D.
+  If you lose, you lose your whole bet of valuable Albinbucks :(.
+  </p>
 
-.stay{
-  background:black;
-  border:white;
-}
-.hit {
-  background:white;
-  border:black;
-}
+  <div id="flex">
+  <h3 id="current_bet"></h3>
 
-p {
-  font-size:14px;
-  color:#13262F;
-  text-align:center;
-  max-width:80%;
-  margin-top:0%;
-  font-family:'Rowdies';
-  font-weight:300;
-}
+  <div id="sub_flex">
+  <div id="dealer_hand"></div>
+  <div id="hand"></div>
 
+  <div id="button_menu">
+  <button id ="play"> Deal </button>
+  <button id ="hit" class="hidden"> Hit </button>
+  <button id ="stay" class="hidden"> Stay </button>
+  <button id ="doubleDown" class="hidden"> Double Down </button>
+  </div>
 
-#flex {
-  color:#9BA7C0;;
-  width:84%;
-  height:70%;
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
-  flex-direction:column;
-  background-color:#13262F;
-  padding:2%;
-}
+  <div id="bet_box">
+  <div id="bet_menu">
+    
+  <button id="5" class="chip"> 5 </button>
+  <button id="10" class="chip"> 10 </button>
+  <button id="25" class="chip"> 25 </button> 
+  <button id="50" class="chip"> 50 </button>
+  <button id="100" class="chip"> 100 </button>
+  <button id="250" class="chip"> 250 </button>
+  <button id="allIn" class="chip"> All In </button>
+    
+  </div>
+    <h3 id="money_count"></h3> 
+  </div>
+    
+</div>
 
-#dealer_hand, #hand {
-   display:flex;
-   align-items:center;
-   justify-content:center;
-   font-weight:400;
-   font-family:'Rowdies';
-   font-size:42px;
-   margin:0;
-}
-
-#dealer_hand img, #hand img {
-  width:6vmax;
-  margin:1vmax;
-}
+<div id="resultPopUp" class="hidden">
+  <h2 id="result"> </h2>
+  <h2 id="yourTotal"> </h2>
+  <h2 id="dealerTotal"> </h2>
+</div>
+</div>
 
 
-#current_bet {
-   font-weight:400;
-   font-family:'Rowdies';
-   font-size:40px;
-   margin-bottom:3%;
-   margin-top:0;
-}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
 
-div#sub_flex {
-  display:flex;
-  align-items:center;
-  justify-content:flex-end;
-  flex-direction:column;
-  height:80%;
-  width:100%;
-  padding:0;
-  margin:0;
-}
-
-#button_menu button {
-  padding:10px;
-  font-size:36px;
-  margin:10px;
-  color:#13262F;
-  width:10vmax;
-  background-color:#9BA7C0;
-  border:none;
-  font-family: 'Rowdies';
-}
-
-#resultPopUp.hidden {
-  display:none;
-  width:0;
-  height:0;
-}
-
-.hidden {
-  display:none;
-  width:0;
-  height:0;
-}
-
-#button_menu, #bet_menu {
-  display:flex;
-  flex-direction:row;
-  justify-content:center;
-  align-items:center;
-  width:80%;
-}
-
-#bet_box {
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  width:80%;
-}
-
-#money_count {
-  font-size:40px;
-  margin:0;
-  font-weight:400;
-  font-family:"Rowdies"
-}
-
-.chip {
-  font-size:36px;
-  margin:1%;
-  font-weight:400;
-  font-family:"Rowdies";
-  border-radius:100%;
-  background-color:#9BA7C0;
-  color:#13262F;
-  border:none;
-  width:6vmax;
-  height:6vmax;
-}
-
-#resultPopUp {
-  position:absolute;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-  padding:3%;
-  width:50%;
-  height:55%;
-  background-color:#9BA7C0;
-}
-
-#resultPopUp h2 {
-  font-size:3vmax;
-  color:#13262F;
-  text-align:center;
-  font-family:'Rowdies';
-  font-weight:normal;
-  margin:2%;
-}
+</html>

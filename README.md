@@ -1,2 +1,2 @@
 # BlackJackGame
-A Black Jack Card Game made with JavaScript(JQuery), HTML, and CSS>
+A Black Jack Card Game made with JavaScript(JQuery), HTML, and CSS.
